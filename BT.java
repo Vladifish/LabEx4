@@ -74,12 +74,13 @@ public class BT<T> {
     // some testing code delete LATER
     // public static void main(String[] args) {
     // BT<Integer> a = new BT<>();
-    // BTNode<Integer> b = new BTNode<Integer>(5);
-    // BTNode<Integer> c = new BTNode<Integer>(5, null, b);
-    // BTNode<Integer> d = new BTNode<Integer>(5, c, null);
-    // BTNode<Integer> e = new BTNode<Integer>(5, d, null);
+    // BTNode<Integer> b = new BTNode<Integer>(2);
+    // BTNode<Integer> c = new BTNode<Integer>(1, null, b);
+    // BTNode<Integer> d = new BTNode<Integer>(3, c, null);
+    // BTNode<Integer> f = new BTNode<Integer>(6, null, null);
+    // BTNode<Integer> e = new BTNode<Integer>(5, d, f);
     // a.setRoot(e);
-
+    // a.computeLevels();
     // System.out.println(e);
 
     // }
