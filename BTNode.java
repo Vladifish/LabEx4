@@ -24,4 +24,30 @@ class BTNode<T> {
         this.left = left;
         this.right = right;
     }
+
+    public String toString() {
+        if (info == null)
+            return "";
+        String s = "[K=" + info;
+        if (left != null || right != null) {
+            if (left != null) {
+                s += " ";
+                s = s + "L=" + left.toString() + ""; // I think the toString is unnecessary
+            }
+            if (right != null) {
+                s += " ";
+                s = s + "R=" + right.toString() + "";
+            }
+        }
+        return s + "]";
+    }
+
+    // public static void main(String[] args) {
+    // BTNode<Integer> A = new BTNode<>(1);
+    // System.out.println(A);
+    // BTNode<Integer> B = new BTNode<>(1, A, A);
+    // System.out.println(B);
+    // BTNode<Integer> C = new BTNode<>(3, B, A);
+    // System.out.println(C);
+    // }
 }
