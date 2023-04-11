@@ -48,7 +48,13 @@ public class BT<T> {
 
     @Override
     public String toString() {
-        return "[" + toString(root) + "]";
+        String s = "ht=";
+        if (root == null) {
+            s += "undefined (tree is empty.)";
+            return s;
+        }
+        s += height + " ";
+        return s + "[" + toString(root) + "]";
     }
 
     // internal implementation
@@ -60,13 +66,21 @@ public class BT<T> {
             if (n.left != null)
                 s = s + "L=" + toString(n.left);
             if (n.right != null)
-                s = s + "R=[" + toString(n.right);
+                s = s + "R=" + toString(n.right);
         }
         return s;
     }
 
+    // some testing code delete LATER
     // public static void main(String[] args) {
     // BT<Integer> a = new BT<>();
-    // System.out.println(a.height);
+    // BTNode<Integer> b = new BTNode<Integer>(5);
+    // BTNode<Integer> c = new BTNode<Integer>(5, null, b);
+    // BTNode<Integer> d = new BTNode<Integer>(5, c, null);
+    // BTNode<Integer> e = new BTNode<Integer>(5, d, null);
+    // a.setRoot(e);
+
+    // System.out.println(e);
+
     // }
 }
