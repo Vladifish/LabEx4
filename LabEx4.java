@@ -6,5 +6,5 @@
  * File: LabEx4
  */
 public class LabEx4 {
-
+    // paedit nlng pag mali yung name :D
 }

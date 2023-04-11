@@ -18,7 +18,7 @@ public class BT<T> {
         root = n;
     }
 
-    void computeLevels() {
+    public void computeLevels() {
         Queue<BTNode<T>> q = new Queue<>();
         BTNode<T> p = root;
         if (p != null) {
@@ -42,7 +42,7 @@ public class BT<T> {
         }
     }
 
-    private void displayInfoAndLevel(BTNode n) {
+    private void displayInfoAndLevel(BTNode<T> n) {
         System.out.println("K=" + n.info + " level=" + n.level);
     }
 

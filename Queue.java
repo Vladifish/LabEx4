@@ -1,8 +1,8 @@
-/*  Tabuzo, Abdiel Clarence && Velazco, Vladimir Gray
-    Queue.java
-    ISC2605 - 1CSC
-    LabEx3
-
+/*  Aaron Jetro A. Alvarez & Vladimir Gray Velazco
+ * Section: 1-CSC
+ * Course: ICS-2605
+ * Lab: Lab Exercise 4
+ * File: Queue
     Notes: The file provides a basic implementation of a queue data structure.
     It uses and array to store the elements of the queue and provides methods for
     adding and removing elements from the front and rear of the queue. It likewise provides
