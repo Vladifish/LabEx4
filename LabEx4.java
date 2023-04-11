@@ -3,5 +3,8 @@
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
- * File: Binary Tree Node
+ * File: LabEx4
  */
+public class LabEx4 {
+
+}
