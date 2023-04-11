@@ -46,8 +46,27 @@ public class BT<T> {
         System.out.println("K=" + n.info + " level=" + n.level);
     }
 
-    public static void main(String[] args) {
-        BT<Integer> a = new BT<>();
-        System.out.println(a.height);
+    @Override
+    public String toString() {
+        return "[" + toString(root) + "]";
     }
+
+    // internal implementation
+    private String toString(BTNode<T> n) {
+        String s = "";
+        if (n != null) {
+            s = "K=" + n.info;
+            // you could add sysout here I think
+            if (n.left != null)
+                s = s + "L=" + toString(n.left);
+            if (n.right != null)
+                s = s + "R=[" + toString(n.right);
+        }
+        return s;
+    }
+
+    // public static void main(String[] args) {
+    // BT<Integer> a = new BT<>();
+    // System.out.println(a.height);
+    // }
 }
