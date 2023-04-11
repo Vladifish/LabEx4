@@ -18,6 +18,34 @@ public class BT<T> {
         root = n;
     }
 
+    void computeLevels() {
+        Queue<BTNode<T>> q = new Queue<>();
+        BTNode<T> p = root;
+        if (p != null) {
+            q.enqueue(p);
+            p.level = 0; // the root is always 0, unless it's empty
+            displayInfoAndLevel(p);
+            while (!q.isEmpty()) {
+                p = q.dequeue();
+                if (p.left != null) {
+                    q.enqueue(p.left);
+                    p.left.level = p.level + 1;
+                    displayInfoAndLevel(p.left);
+                }
+                if (p.right != null) {
+                    q.enqueue(p.right);
+                    p.right.level = p.level + 1;
+                    displayInfoAndLevel(p.right);
+                }
+                height = p.level;
+            }
+        }
+    }
+
+    private void displayInfoAndLevel(BTNode n) {
+        System.out.println("K=" + n.info + " level=" + n.level);
+    }
+
     public static void main(String[] args) {
         BT<Integer> a = new BT<>();
         System.out.println(a.height);
