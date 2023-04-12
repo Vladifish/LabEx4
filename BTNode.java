@@ -1,5 +1,5 @@
 /*
- * Authors: Aaron Jetro A. Alvarez & Vladimir Gray P. Velazco
+ * Authors: Aaron Jetro C. Alvarez & Vladimir Gray P. Velazco
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
@@ -42,13 +42,4 @@ class BTNode<T> {
         return s + "]";
     }
 
-    // DELETE LATER
-    // public static void main(String[] args) {
-    // BTNode<Integer> A = new BTNode<>(1);
-    // System.out.println(A);
-    // BTNode<Integer> B = new BTNode<>(1, A, A);
-    // System.out.println(B);
-    // BTNode<Integer> C = new BTNode<>(3, B, A);
-    // System.out.println(C);
-    // }
 }

@@ -1,4 +1,4 @@
-/*  Aaron Jetro A. Alvarez & Vladimir Gray Velazco
+/*  Aaron Jetro C. Alvarez & Vladimir Gray Velazco
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
@@ -8,19 +8,19 @@
     adding and removing elements from the front and rear of the queue. It likewise provides
     methods for checking if the queue is empty, full, or contains a specific element.
  */
-public class Queue<Type> {
+public class Queue<T> {
     private int maxQueueSize = 100;
     private int front = -1, rear = -1;
-    private Object[] que;
+    private Object[] q;
 
     public Queue() {
-        que = new Object[maxQueueSize];
+        q = new Object[maxQueueSize];
     }
 
     public Queue(int n) {
         if (n > 0)
             maxQueueSize = n;
-        que = new Object[maxQueueSize];
+        q = new Object[maxQueueSize];
     }
 
     public void clear() {
@@ -36,20 +36,20 @@ public class Queue<Type> {
         return ((rear + 1) % maxQueueSize == front);
     }
 
-    public int enqueue(Type el) {
+    public int enqueue(T el) {
         if (isFull())
             return -999;
         rear = (rear + 1) % maxQueueSize;
-        que[rear] = el;
+        q[rear] = el;
         if (front == -1)
             front = 0;
         return 1;
     }
 
-    public Type dequeue() {
+    public T dequeue() {
         if (isEmpty())
             return null;
-        Type el = (Type) que[front];
+        T el = (T) q[front];
         if (front == rear)
             clear();
         else
@@ -57,11 +57,11 @@ public class Queue<Type> {
         return el;
     }
 
-    public Type peek() {
+    public T peek() {
         if (isEmpty())
             return null;
         else
-            return (Type) que[front];
+            return (T) q[front];
     }
 
 }

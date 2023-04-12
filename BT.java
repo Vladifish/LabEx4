@@ -1,5 +1,5 @@
 /*
- * Authors: Aaron Jetro A. Alvarez & Vladimir Gray P. Velazco
+ * Authors: Aaron Jetro C. Alvarez & Vladimir Gray P. Velazco
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
@@ -54,34 +54,7 @@ public class BT<T> {
             return s;
         }
         s += height + " ";
-        return s + "[" + toString(root) + "]";
+        return s + root;
     }
 
-    // internal implementation
-    private String toString(BTNode<T> n) {
-        String s = "";
-        if (n != null) {
-            s = "K=" + n.info;
-            // you could add sysout here I think
-            if (n.left != null)
-                s = s + "L=" + toString(n.left);
-            if (n.right != null)
-                s = s + "R=" + toString(n.right);
-        }
-        return s;
-    }
-
-    // some testing code delete LATER
-    // public static void main(String[] args) {
-    // BT<Integer> a = new BT<>();
-    // BTNode<Integer> b = new BTNode<Integer>(2);
-    // BTNode<Integer> c = new BTNode<Integer>(1, null, b);
-    // BTNode<Integer> d = new BTNode<Integer>(3, c, null);
-    // BTNode<Integer> f = new BTNode<Integer>(6, null, null);
-    // BTNode<Integer> e = new BTNode<Integer>(5, d, f);
-    // a.setRoot(e);
-    // a.computeLevels();
-    // System.out.println(e);
-
-    // }
 }
