@@ -30,9 +30,13 @@ public class LabEx4 {
                 if (tVal == 1) {
                         createBTBottomUp();
                 } else if (tVal == 2) {
-                        // insertSearchBST();
+                        insertSearchBST();
                 }
                 console.close();
+        }
+
+        private static void insertSearchBST() {
+
         }
 
         private static void createBTBottomUp() {
@@ -79,6 +83,8 @@ public class LabEx4 {
                 System.out.println(t2 + "\n");
                 createLine();
         }
+
+        // Utility Functions
 
         private static void createLine() {
                 System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = =\n");
