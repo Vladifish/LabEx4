@@ -36,7 +36,7 @@ public class LabEx4 {
         }
 
         private static void insertSearchBST() {
-
+                BST<Character> bst1 = new BST<>();
         }
 
         private static void createBTBottomUp() {

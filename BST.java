@@ -8,10 +8,10 @@
 public class BST<T> extends BT<T> {
 
     // Templates, so I can work on main
-    void insert() {
+    void insert(T info) {
     }
 
-    T search() {
+    T search(T key) {
         return null;
     }
 }
