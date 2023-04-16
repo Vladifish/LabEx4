@@ -11,7 +11,7 @@ public class BST<T> extends BT<T> {
     void insert(T info) {
     }
 
-    T search(T key) {
+    BTNode<T> search(T key) {
         return null;
     }
 }

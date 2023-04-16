@@ -37,6 +37,28 @@ public class LabEx4 {
 
         private static void insertSearchBST() {
                 BST<Character> bst1 = new BST<>();
+                // 2.
+                final String INSERTED_CHARACTERS = "FTDQALEPSMHC";
+                for (int i = 0; i < INSERTED_CHARACTERS.length(); i++) {
+                        bst1.insert(INSERTED_CHARACTERS.charAt(i));
+                }
+                // 3.
+                System.out.println("BST1: ");
+                System.out.println(bst1);
+                createLine();
+                // I don't get what # 4 is saying
+                final String SEARCHED_CHARACTERS = "RAFLNDV";
+                for (int i = 0; i < SEARCHED_CHARACTERS.length(); i++) {
+                        char key = SEARCHED_CHARACTERS.charAt(i); // the character to be searched for
+                        BTNode<Character> searchedNode = bst1.search(SEARCHED_CHARACTERS.charAt(i));
+
+                        if (searchedNode != null) {
+                                System.out.println(searchedNode + " level=" + searchedNode.level);
+                        } else {
+                                System.out.println("info=" + key + " not found");
+                        }
+                        createLine();
+                }
         }
 
         private static void createBTBottomUp() {
