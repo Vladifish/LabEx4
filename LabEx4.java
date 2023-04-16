@@ -30,7 +30,7 @@ public class LabEx4 {
                 if (tVal == 1) {
                         createBTBottomUp();
                 } else if (tVal == 2) {
-
+                        // insertSearchBST();
                 }
                 console.close();
         }
@@ -39,9 +39,10 @@ public class LabEx4 {
                 // For tree 0:
                 BT<Integer> t0 = new BT<>();
 
-                System.out.println("Empty Tree t0:");
+                System.out.println("The empty tree t0:");
                 t0.computeLevels();
                 System.out.println(t0 + "\n");
+                createLine();
 
                 // For tree 1:
                 BTNode<Integer> n2 = new BTNode<>(2), n4 = new BTNode<>(4);
@@ -51,9 +52,10 @@ public class LabEx4 {
                 BT<Integer> t1 = new BT<>();
 
                 t1.setRoot(n3);
-                t1.computeLevels();
                 System.out.println("The tree t1 above:");
+                t1.computeLevels();
                 System.out.println(t1 + "\n");
+                createLine();
 
                 // For tree 2: (side note: I feel like this way of instantiation is inefficient.
 
@@ -72,13 +74,14 @@ public class LabEx4 {
                 BT<Character> t2 = new BT<>();
 
                 t2.setRoot(s);
-                t2.computeLevels();
                 System.out.println("The tree t2 below:");
+                t2.computeLevels();
                 System.out.println(t2 + "\n");
+                createLine();
         }
 
         private static void createLine() {
-                System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = =");
+                System.out.println("= = = = = = = = = = = = = = = = = = = = = = = = = =\n");
         }
 
 }
