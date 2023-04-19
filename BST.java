@@ -7,11 +7,54 @@
  */
 public class BST<T> extends BT<T> {
 
-    // Templates, so I can work on main
+    BST() {
+        root = null;
+    }
+
     void insert(T info) {
+
+        if (root == null) {
+            root = new BTNode<>(info);
+            return;
+        }
+
+        BTNode<T> n = root, p = null;
+        int level = 0;
+
+        while (n != null) {
+            p = n;
+            if (((Comparable) info).compareTo(n.info) < 0)
+                n = n.left;
+            else
+                n = n.right;
+            level++;
+        }
+
+        if (((Comparable) info).compareTo(p.info) < 0) {
+            p.left = new BTNode<>(info);
+            p.left.level = level;
+        } else {
+            p.right = new BTNode<>(info);
+            p.right.level = level;
+        }
+        if (level > height)
+            height = level;
+
     }
 
     BTNode<T> search(T key) {
+        BTNode<T> n = root;
+
+        while (n != null) {
+            if (key == n.info)
+                return n;
+            else {
+                if (((Comparable) key).compareTo(n.info) < 0)
+                    n = n.left;
+                else
+                    n = n.right;
+            }
+        }
         return null;
     }
 }
