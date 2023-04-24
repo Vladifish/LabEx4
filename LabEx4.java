@@ -4,7 +4,8 @@
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
- * File: LabEx4
+ * File: LabEx4, 
+ * Note: my editor (VSC) keeps on moving the comment to the 2nd line
  */
 import java.util.Scanner;
 
@@ -20,6 +21,8 @@ public class LabEx4 {
                                 |               Alvarez, Aaron Jetro                  |
                                 |              Velazco, Vladimir Gray                 |
                                 |                                                     |
+                                |           t=1 Create a BT Tree from Bottom-Up       |
+                                |           t=2 Insert and Search a BST               |
                                 * = = = = = = = = = = = = = = = = = = = = = = = = = = *
                                 """);
 
@@ -44,9 +47,9 @@ public class LabEx4 {
                 }
                 // 3.
                 System.out.println("BST1: ");
-                System.out.println(bst1);
+                System.out.println(bst1); // If you graph the toString, it's a VLR depth first traversal
                 createLine();
-                // I don't get what # 4 is saying
+
                 final String SEARCHED_CHARACTERS = "RAFLNDV";
                 for (int i = 0; i < SEARCHED_CHARACTERS.length(); i++) {
                         char key = SEARCHED_CHARACTERS.charAt(i); // the character to be searched for
