@@ -1,4 +1,5 @@
-/*  Aaron Jetro C. Alvarez & Vladimir Gray Velazco
+/*  
+ * Authors: Aaron Jetro C. Alvarez & Vladimir Gray Velazco
  * Section: 1-CSC
  * Course: ICS-2605
  * Lab: Lab Exercise 4
