@@ -42,8 +42,23 @@ public class BT<T> {
         }
     }
 
+    // Separated from computeLevels
     private void displayInfoAndLevel(BTNode<T> n) {
         System.out.println("K=" + n.info + " level=" + n.level);
+    }
+
+    public int countLessPostorder(BTNode<T> n, T info) {
+        if (n == null)
+            return 0;
+
+        int countLeft = countLessPostorder(n.left, info);
+        int countRight = countLessPostorder(n.right, info);
+        int count = 0;
+
+        if (((Comparable) n.info).compareTo(info) < 0)
+            count += 1;
+
+        return count + countLeft + countRight;
     }
 
     @Override

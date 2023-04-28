@@ -107,6 +107,15 @@ public class LabEx4 {
                 t2.computeLevels();
                 System.out.println(t2 + "\n");
                 createLine();
+
+                final String COUNTLESS_POSTORDER = "AEKW";
+                for (int i = 0; i < COUNTLESS_POSTORDER.length(); i++) {
+                        char key = COUNTLESS_POSTORDER.charAt(i); // the character to be searched for
+                        int count = t2.countLessPostorder(t2.root, key);
+                        System.out.println("Key = " + key + " : Count = " + count);
+
+                        createLine();
+                }
         }
 
         // Utility Functions
