@@ -21,8 +21,8 @@ public class LabEx4 {
                                 |               Alvarez, Aaron Jetro                  |
                                 |              Velazco, Vladimir Gray                 |
                                 |                                                     |
-                                |           t=1 Create a BT Tree from Bottom-Up       |
-                                |           t=2 Insert and Search a BST               |
+                                |         t=1 Create a BT Tree from Bottom-Up         |
+                                |         t=2 Insert and Search a BST                 |
                                 * = = = = = = = = = = = = = = = = = = = = = = = = = = *
                                 """);
 
