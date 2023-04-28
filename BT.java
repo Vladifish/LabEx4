@@ -47,15 +47,15 @@ public class BT<T> {
         System.out.println("K=" + n.info + " level=" + n.level);
     }
 
-    public int countLessPostorder(BTNode<T> n, T info) {
+    public int countLessPostorder(BTNode<T> n, T k) {
         if (n == null)
             return 0;
 
-        int countLeft = countLessPostorder(n.left, info);
-        int countRight = countLessPostorder(n.right, info);
+        int countLeft = countLessPostorder(n.left, k);
+        int countRight = countLessPostorder(n.right, k);
         int count = 0;
 
-        if (((Comparable) n.info).compareTo(info) < 0)
+        if (((Comparable) n.info).compareTo(k) < 0)
             count += 1;
 
         return count + countLeft + countRight;
